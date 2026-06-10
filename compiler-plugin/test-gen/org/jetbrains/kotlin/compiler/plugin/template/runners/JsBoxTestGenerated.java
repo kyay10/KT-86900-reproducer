@@ -25,14 +25,14 @@ public class JsBoxTestGenerated extends AbstractJsBoxTest {
   }
 
   @Test
-  @TestMetadata("anotherBoxTest.kt")
-  public void testAnotherBoxTest() {
-    run("anotherBoxTest.kt");
+  @TestMetadata("fails.kt")
+  public void testFails() {
+    run("fails.kt");
   }
 
   @Test
-  @TestMetadata("simple.kt")
-  public void testSimple() {
-    run("simple.kt");
+  @TestMetadata("workaround.kt")
+  public void testWorkaround() {
+    run("workaround.kt");
   }
 }

@@ -29,10 +29,4 @@ public class JvmDiagnosticTestGenerated extends AbstractJvmDiagnosticTest {
   public void testAnotherDiagnosticTest() {
     run("anotherDiagnosticTest.kt");
   }
-
-  @Test
-  @TestMetadata("simple.kt")
-  public void testSimple() {
-    run("simple.kt");
-  }
 }

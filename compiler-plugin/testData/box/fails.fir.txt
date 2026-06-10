@@ -1,0 +1,14 @@
+FILE: fails.kt
+    @R|org/jetbrains/kotlin/compiler/plugin/template/SomeAnnotation|() public abstract fun interface Foo : R|kotlin/Any| {
+        public abstract fun foo(): R|kotlin/Unit|
+
+    }
+    public final fun makeFoo(foo: R|Foo|): R|kotlin/Unit| {
+    }
+    public final fun box(): R|kotlin/String| {
+        R|/makeFoo<Inapplicable(INAPPLICABLE): /makeFoo>#|(<L> = makeFoo@fun <anonymous>(): R|kotlin/Unit| <inline=Unknown>  {
+            ^@makeFoo Unit
+        }
+        )
+        ^box String(OK)
+    }

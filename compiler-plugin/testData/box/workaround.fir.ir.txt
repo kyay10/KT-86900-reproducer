@@ -1,0 +1,39 @@
+FILE fqName:<root> fileName:/workaround.kt
+  CLASS INTERFACE name:Foo modality:ABSTRACT visibility:public [fun] superTypes:[org.jetbrains.kotlin.compiler.plugin.template.Base]
+    annotations:
+      SomeAnnotation
+    thisReceiver: VALUE_PARAMETER INSTANCE_RECEIVER kind:DispatchReceiver name:<this> type:<root>.Foo
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN returnType:kotlin.Boolean [fake_override,operator]
+      VALUE_PARAMETER kind:DispatchReceiver name:<this> index:0 type:kotlin.Any
+      VALUE_PARAMETER kind:Regular name:other index:1 type:kotlin.Any?
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in org.jetbrains.kotlin.compiler.plugin.template.Base
+    FUN FAKE_OVERRIDE name:foo visibility:public modality:OPEN returnType:kotlin.Unit [fake_override]
+      VALUE_PARAMETER kind:DispatchReceiver name:<this> index:0 type:org.jetbrains.kotlin.compiler.plugin.template.Base
+      VALUE_PARAMETER kind:Regular name:nothing index:1 type:kotlin.Nothing
+      overridden:
+        public open fun foo (nothing: kotlin.Nothing): kotlin.Unit declared in org.jetbrains.kotlin.compiler.plugin.template.Base
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN returnType:kotlin.Int [fake_override]
+      VALUE_PARAMETER kind:DispatchReceiver name:<this> index:0 type:kotlin.Any
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in org.jetbrains.kotlin.compiler.plugin.template.Base
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN returnType:kotlin.String [fake_override]
+      VALUE_PARAMETER kind:DispatchReceiver name:<this> index:0 type:kotlin.Any
+      overridden:
+        public open fun toString (): kotlin.String declared in org.jetbrains.kotlin.compiler.plugin.template.Base
+    FUN GENERATED[org.jetbrains.kotlin.compiler.plugin.template.fir.SimpleClassGenerator.Key] name:foo visibility:public modality:ABSTRACT returnType:kotlin.Unit
+      VALUE_PARAMETER kind:DispatchReceiver name:<this> index:0 type:<root>.Foo
+  FUN name:box visibility:public modality:FINAL returnType:kotlin.String
+    BLOCK_BODY
+      CALL 'public final fun makeFoo (foo: <root>.Foo): kotlin.Unit declared in <root>' type=kotlin.Unit origin=null
+        ARG foo: TYPE_OP type=<root>.Foo origin=SAM_CONVERSION typeOperand=<root>.Foo
+          FUN_EXPR type=kotlin.Function0<kotlin.Unit> origin=LAMBDA
+            FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL returnType:kotlin.Unit
+              BLOCK_BODY
+                RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.Unit declared in <root>.box'
+                  GET_OBJECT 'CLASS IR_EXTERNAL_DECLARATION_STUB OBJECT name:Unit modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.Unit
+      RETURN type=kotlin.Nothing from='public final fun box (): kotlin.String declared in <root>'
+        CONST String type=kotlin.String value="OK"
+  FUN name:makeFoo visibility:public modality:FINAL returnType:kotlin.Unit
+    VALUE_PARAMETER kind:Regular name:foo index:0 type:<root>.Foo
+    BLOCK_BODY
